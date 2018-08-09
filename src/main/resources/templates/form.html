@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Create Airline</h1>
+    <form th:action="@{/airline/save}" th:object="${airline}" method="POST">
+    Name : <input type="text" th:field="*{airline.name}"/>
+    OtherDetails : <input type="text" th:field="*{airline.otherDetails}"/>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
